@@ -12,9 +12,8 @@ const saveValues = () => {
 };
 
 function signUp() {
-  if (isFilled() && verifyPassword() && passwordMatch()) {
+  if (isFilled() && passwordMatch()) {
     // document.getElementById('success').style.display = 'block'
-    console.log('run successfully');
     document.getElementById("signUp").style.display = "none";
     document.getElementById("profile").style.display = "block";
     localStorage.setItem("accessToken", getAccessToken());
