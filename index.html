@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Sign Up -->
+    <form id="form">
+      <div id="signUp">
+        <h3>Sign Up</h3>
+        <div class="input-boxes">
+          <input type="text" placeholder="Full Name" id="name" />
+          <input type="email" placeholder="Email" id="email" />
+          <input type="password" placeholder="Password" id="password" />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            id="confirm_password"
+          />
+          <p id="invalid_pwd">Password and Confirm Password do not match</p>
+          <p id="missing_fields">All fields are mandatory</p>
+        </div>
+        <button type="button" onclick="saveValues()">Sign Up</button>
+      </div>
+    </form>
+
+    <!-- Profile -->
+    <div id="profile">
+      <h3>Your Profile</h3>
+      <p id="showName"></p>
+      <p id="showEmail"></p>
+      <p id="showPassword"></p>
+
+      <button onClick="logOut()">Log Out</button>
+    </div>
+  </body>
+  <script src="./signUp.js"></script>
+  <script src="./profile.js"></script>
+</html>

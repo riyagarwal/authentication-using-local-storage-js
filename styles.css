@@ -1,0 +1,7 @@
+#invalid_pwd, #missing_fields {
+    display: none;
+}
+
+#profile{
+    display: none;
+}
