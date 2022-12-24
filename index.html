@@ -21,8 +21,9 @@
             placeholder="Confirm Password"
             id="confirm_password"
           />
-          <p id="invalid_pwd">Password and Confirm Password do not match</p>
+          <p id="pwd_mismatch">Password and Confirm Password do not match</p>
           <p id="missing_fields">All fields are mandatory</p>
+          <p id="invalid_pwd">Password should be atleast 8 characters long</p>
           <!-- <p id="success">You are successfully signed up!</p> -->
         </div>
         <button type="button" onclick="saveValues()">Sign Up</button>
@@ -41,5 +42,9 @@
   </body>
   <script src="./signUp.js"></script>
   <script src="./isFilled.js"></script>
+  <script src="./passwordMatch.js"></script>
   <script src="./verifyPassword.js"></script>
+  <script src="./getAccessToken.js"></script>
+  <script src="./showProfile.js"></script>
+  <script src="./logOut.js"></script>
 </html>

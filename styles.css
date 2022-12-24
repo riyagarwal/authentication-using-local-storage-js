@@ -38,7 +38,7 @@ button {
 }
 
 #invalid_pwd,
-#missing_fields {
+#missing_fields, #pwd_mismatch {
   display: none;
   color: red;
 }

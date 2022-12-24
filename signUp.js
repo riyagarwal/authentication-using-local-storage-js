@@ -12,9 +12,9 @@ const saveValues = () => {
 };
 
 function signUp() {
-  if (isFilled() && verifyPassword()) {
+  if (isFilled() && verifyPassword() && passwordMatch()) {
     // document.getElementById('success').style.display = 'block'
-
+    console.log('run successfully');
     document.getElementById("signUp").style.display = "none";
     document.getElementById("profile").style.display = "block";
     localStorage.setItem("accessToken", getAccessToken());
@@ -25,62 +25,3 @@ function signUp() {
   }
 }
 
-// Function to check whether all fields are filled or not
-// const isFilled = () => {
-//   if (
-//     !localStorage.getItem("name") ||
-//     !localStorage.getItem("email") ||
-//     !localStorage.getItem("password") ||
-//     !localStorage.getItem("confirm_password")
-//   ) {
-//     document.getElementById("missing_fields").style.display = "block";
-//     return false;
-//   } else {
-//     document.getElementById("missing_fields").style.display = "none";
-//     return true;
-//   }
-// };
-
-// function to verify password
-// const verifyPassword = () => {
-//   if (
-//     localStorage.getItem("password") !==
-//     localStorage.getItem("confirm_password")
-//   ) {
-//     document.getElementById("invalid_pwd").style.display = "block";
-//     return false;
-//   } else {
-//     document.getElementById("invalid_pwd").style.display = "none";
-//     return true;
-//   }
-// };
-
-// function to generate access token
-const getAccessToken = () => {
-  let result = "";
-  let characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let charactersLength = characters.length;
-  for (let i = 0; i < 16; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-};
-
-const showProfile = () => {
-  document.getElementById(
-    "showName"
-  ).textContent = `Full Name: ${localStorage.getItem("name")}`;
-  document.getElementById(
-    "showEmail"
-  ).textContent = `Email: ${localStorage.getItem("email")}`;
-  document.getElementById(
-    "showPassword"
-  ).textContent = `Password: ${localStorage.getItem("password")}`;
-};
-
-const logOut = () => {
-  localStorage.clear();
-  document.getElementById("signUp").style.display = "block";
-  document.getElementById("profile").style.display = "none";
-};
